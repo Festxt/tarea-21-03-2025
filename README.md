@@ -1,5 +1,5 @@
 # tarea-21-03-2025
-´´´mermaid 
+```mermaid
 classDiagram
     class Habitacion {
         - int numero
