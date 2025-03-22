@@ -5,11 +5,11 @@ classDiagram
         - int numero
         - string tipo
         - bool ocupada
-        + Habitacion(int num, string t)
+        + Habitacion(int, string)
         + ~Habitacion()
-        + int getNumero() const
-        + string getTipo() const
-        + bool estaOcupada() const
+        + int getNumero() 
+        + string getTipo() 
+        + bool estaOcupada() 
         + void ocupar()
         + void desocupar()
     }
@@ -17,22 +17,22 @@ classDiagram
     class Cliente {
         - int id
         - string nombre
-        + Cliente(int i, string n)
+        + Cliente(int, string)
         + ~Cliente()
-        + int getId() const
-        + string getNombre() const
+        + int getId()
+        + string getNombre()
     }
 
     class Hotel {
         - string nombre
         - vector<Habitacion> habitaciones
         - vector<Cliente*> clientes
-        + Hotel(string n)
+        + Hotel(string)
         + ~Hotel()
-        + void agregarHabitacion(int numero, string tipo)
+        + void agregarHabitacion(int, string)
         + void registrarCliente(Cliente* cliente)
         + void mostrarInfo() const
     }
 
-    Hotel "1" *-- "many" Habitacion : Composición
-    Hotel "1" o-- "many" Cliente : Agregación
+    Hotel o--  Habitacion : Composición
+    Hotel o--  Cliente : Agregación
