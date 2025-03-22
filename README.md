@@ -36,6 +36,7 @@ classDiagram
 
     Hotel *-- Habitacion 
     Hotel o-- Cliente
+´´´mermaid
 classDiagram
     class Auto {
         - string placa
