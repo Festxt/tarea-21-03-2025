@@ -27,7 +27,7 @@ classDiagram
         - string nombre
         - vector<Habitacion> habitaciones
         - vector<Cliente*> clientes
-        + Hotel(string n)
+        + Hotel(string)
         + ~Hotel()
         + void agregarHabitacion(int, string)
         + void registrarCliente(Cliente* cliente)
