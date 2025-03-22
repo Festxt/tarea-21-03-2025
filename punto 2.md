@@ -1,17 +1,17 @@
-´´´mermaid
-classDiagram
-    class Auto {
-        - string placa
-        - string modelo
-        - bool disponible
-        + Auto(string, string)
-        + ~Auto()
-        + string getPlaca()
-        + string getModelo()
-        + bool estaDisponible()
-        + void rentar()
-        + void devolver()
-    }
+    ´´´mermaid
+        classDiagram
+            class Auto {
+                - string placa
+                - string modelo
+                - bool disponible
+                + Auto(string, string)
+                + ~Auto()
+                + string getPlaca()
+                + string getModelo()
+                + bool estaDisponible()
+                + void rentar()
+                + void devolver()
+            }
 
     class Cliente {
         - int id
