@@ -1,15 +1,16 @@
 # tarea-21-03-2025
 ```mermaid
+```mermaid
 classDiagram
     class Habitacion {
         - int numero
         - string tipo
         - bool ocupada
-        + Habitacion(int, string)
+        + Habitacion(int num, string t)
         + ~Habitacion()
-        + int getNumero() 
-        + string getTipo() 
-        + bool estaOcupada() 
+        + int getNumero() const
+        + string getTipo() const
+        + bool estaOcupada() const
         + void ocupar()
         + void desocupar()
     }
@@ -17,22 +18,22 @@ classDiagram
     class Cliente {
         - int id
         - string nombre
-        + Cliente(int, string)
+        + Cliente(int i, string n)
         + ~Cliente()
-        + int getId()
-        + string getNombre()
+        + int getId() const
+        + string getNombre() const
     }
 
     class Hotel {
         - string nombre
         - vector<Habitacion> habitaciones
         - vector<Cliente*> clientes
-        + Hotel(string)
+        + Hotel(string n)
         + ~Hotel()
-        + void agregarHabitacion(int, string)
+        + void agregarHabitacion(int numero, string tipo)
         + void registrarCliente(Cliente* cliente)
         + void mostrarInfo() const
     }
 
-    Hotel "1"* o-- "" Habitacion : composición
-    Hotel "1" o-- "" Cliente : agregación
+    Hotel "1" *-- Habitacion 
+    Hotel "1" o-- Cliente 
