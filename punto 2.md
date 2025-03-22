@@ -1,4 +1,4 @@
-    ´´´mermaid
+```mermaid
         classDiagram
             class Auto {
                 - string placa
