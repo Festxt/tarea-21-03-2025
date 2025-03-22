@@ -5,7 +5,7 @@ classDiagram
         - int numero
         - string tipo
         - bool ocupada
-        + Habitacion(int num, string t)
+        + Habitacion(int, string)
         + ~Habitacion()
         + int getNumero() const
         + string getTipo() const
@@ -17,7 +17,7 @@ classDiagram
     class Cliente {
         - int id
         - string nombre
-        + Cliente(int i, string n)
+        + Cliente(int, string)
         + ~Cliente()
         + int getId() const
         + string getNombre() const
@@ -29,7 +29,7 @@ classDiagram
         - vector<Cliente*> clientes
         + Hotel(string n)
         + ~Hotel()
-        + void agregarHabitacion(int numero, string tipo)
+        + void agregarHabitacion(int, string)
         + void registrarCliente(Cliente* cliente)
         + void mostrarInfo() const
     }
