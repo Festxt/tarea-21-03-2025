@@ -34,5 +34,5 @@ classDiagram
         + void mostrarInfo() const
     }
 
-    Hotel o--  Habitacion : Composición
-    Hotel o--  Cliente : Agregación
+    Hotel "1"* o--  Habitacion 
+    Hotel "1" o--  Cliente 
